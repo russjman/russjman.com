@@ -133,15 +133,12 @@
                 fragment = document.createDocumentFragment();
                 if ((this.options.filter != null) && typeof this.options.filter === 'function') {
                     images = this._filter(images, this.options.filter);
-                    console.log(images)
                 }
                 if ((this.options.template != null) && typeof this.options.template === 'string') {
                     htmlString = '';
                     imageString = '';
                     imgUrl = '';
                     tmpEl = document.createElement('div');
-                    console.log(images)
-
                     for (_i = 0, _len = images.length; _i < _len; _i++) {
                         image = images[_i];
                         imageUrl = image.images[this.options.resolution].url;

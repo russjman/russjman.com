@@ -5,8 +5,8 @@ A simple simple site to using showcase random crap i've done for work and for fu
 
 ##Technologies
 ###Javascript
-[Fullpage] (https://github.com/alvarotrigo/fullPage.js)
-[Instafeed - used no accessToken version] (https://github.com/stevenschobert/instafeed.js)
+- [Fullpage] (https://github.com/alvarotrigo/fullPage.js)
+- [Instafeed - no accessToken version] (https://github.com/stevenschobert/instafeed.js)
 
 ## Social
 - [twitter](http://twitter.com/desktopbohemian)

@@ -26,7 +26,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
     <script type="text/javascript" src="js/instafeed.js"></script>
 
     <script type="text/javascript">
@@ -34,7 +33,8 @@
             get: 'user',
             userId: 350784910,
             clientId: '83713aecc9644bcea77ff37f322d1f0e',
-            template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
+            template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>',
+            limit:60
         });
         feed.run();
     </script>
@@ -62,9 +62,6 @@
 
 <div id="fullpage">
     <div class="section " id="section0">
-        <h1>Life</h1>
-        <div class="intro">
-
             <div class="slide">
                 <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
                 <ul>
@@ -74,7 +71,7 @@
                 </ul>
             </div>
             <div class="slide">
-                <h3>Instagram</h3>
+                <h2>Instagram</h2>
                 <div id="instafeed"></div>
             </div>
             <div class="slide">
@@ -82,15 +79,10 @@
                 <h1>Simple</h1>
                 <p>Easy to use. Configurable and customizable.</p>
             </div>
-        </div>
-
-
-
     </div>
     <div class="section" id="section1">
         <h1>Work</h1>
         <div class="slide">
-
             <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
             <ul>
                 <li>inspiration</li>
@@ -120,16 +112,17 @@
                 <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
             </div>
         </div>
-        <div class="section" id="section2">
-            <h1>Contact</h1>
-            <div class="intro">
-                <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
-                <ul>
-                    <li>email</li>
-                    <li>linkedin</li>
-                    <li>social accounts</li>
-                </ul>
-            </div>
+
+    </div>
+    <div class="section" id="section2">
+        <h1>Contact</h1>
+        <div class="intro">
+            <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
+            <ul>
+                <li>email</li>
+                <li>linkedin</li>
+                <li>social accounts</li>
+            </ul>
         </div>
     </div>
 
