@@ -12,3 +12,4 @@ A simple simple site to using showcase random crap i've done for work and for fu
 - [twitter](http://twitter.com/desktopbohemian)
 - [facebook](http://twitter.com/russjman)
 - [instagram](http://instagram.com/russjman)
+- [linkedin] ()
