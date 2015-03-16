@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <!--<link rel="stylesheet" type="text/css" href="css/examples.css" />-->
     <link rel="stylesheet" type="text/css" href="css/russjman.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.zrssfeed.css" />
 
     <!--[if IE]>
     <script type="text/javascript">
@@ -22,18 +23,21 @@
     </script>
     <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="js/instafeed.js"></script>
+    <script type="text/javascript" src="js/jquery.zrssfeed.min.js"></script>
+
 
     <script type="text/javascript">
+
         var feed = new Instafeed({
             get: 'user',
             userId: 350784910,
             clientId: '83713aecc9644bcea77ff37f322d1f0e',
-            template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>',
+            template: '<a class="animation" href="{{link}}" target=")_blank"><img src="{{image}}" /></a>',
             limit:60
         });
         feed.run();
@@ -42,11 +46,18 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
+
+            $('#blogFeed').rssfeed('https://desktopbohemian.wordpress.com/feed/', {
+                limit: 5
+            });
+
             $('#fullpage').fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                sectionsColor: ['whitesmoke', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
                 anchors: ['life', 'work', 'contact', '4thpage', 'lastPage'],
                 menu: '#menu',
-                continuousVertical: true
+                continuousVertical: true,
+                slidesNavigation: true
+
             });
         });
     </script>
@@ -69,21 +80,30 @@
     <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
 </ul>
 
+<h1 class="header">Russell Mantilla | russjman.com</h1>
+
 <div id="fullpage">
     <div class="section " id="section0">
-            <div class="slide">
+        <div class="slide">
+            <div class="container intro">
+                <img src="images/cropped-img_20141103_131607-e1415160705995.jpg" alt="" class="slide-header" />
+                <!--<div class="jumbotron">-->
                 <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
-                <h2>Facebook Feed</h2>
-                <h2>Blog Feed</h2>
+                <!--</div>-->
             </div>
-            <div class="slide">
-                <h2>Instagram</h2>
+        </div>
+        <div class="slide">
+            <h2>Blog</h2>
+            <div class="container">
+                <div id="blogFeed"></div>
+            </div>
+        </div>
+        <div class="slide">
+            <h2>Photos</h2>
+            <div class="container">
                 <div id="instafeed"></div>
-                <h2>Facebook Photos</h2>
             </div>
-            <div class="slide">
-                <h2>Something Interesting</h2>
-            </div>
+        </div>
     </div>
     <div class="section" id="section1">
         <div class="slide">
@@ -112,9 +132,10 @@
         <div class="intro">
             <p>Sed vel justo et eros convallis scelerisque vitae non eros. Sed sit amet lacus luctus lacus lacinia laoreet vitae a dolor. Vivamus at ex vel risus lobortis viverra non non magna. Vestibulum vitae tellus molestie, facilisis libero nec, tempor nibh. Proin a commodo tellus. Aliquam accumsan vitae massa vel sodales. Vestibulum rutrum nibh vitae sodales dictum. Maecenas ipsum nisl, auctor eget nibh ac, facilisis vehicula mauris.</p>
             <ul>
-                <li>email</li>
-                <li>linkedin</li>
-                <li>social accounts</li>
+                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> email</li>
+                <li><span class="glyphicon glyphicon-link" aria-hidden="true"></span> linkedin</li>
+                <li><span class="glyphicon glyphicon-book" aria-hidden="true"></span> facebook</li>
+                <li><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> instagram</li>
             </ul>
         </div>
     </div>

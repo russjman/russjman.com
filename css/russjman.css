@@ -5,26 +5,35 @@
     padding:5px;
     display: inline-block;
     text-align: center;
-    -webkit-animation: fadeIn 3s; /* Chrome, Safari, Opera */
-    animation: fadeIn 3s;
+    -webkit-animation: ease-in fadeIn 3s; /* Chrome, Safari, Opera */
+    animation: fadeIn ease-in 3s;
     width:60px;
 
 }
 #instafeed a > img {width:100%;}
 #instafeed a:hover{
-    opacity:0.7;
+    -webkit-animation: fadeIn 2s linear 1s infinite alternate;
+    animation: fadeIn 2s linear 1s infinite alternate;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Standard syntax */
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -50,8 +59,7 @@
     display:inline-block;
     margin: 10px;
     color: #000;
-    background:#fff;
-    background: rgba(255,255,255, 0.5);
+    background:none;
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -81,12 +89,28 @@
 #menu{
     position:fixed;
     top:0;
-    left:0;
+    right:0;
     height: 40px;
     z-index: 70;
-    width: 100%;
+    width: auto;
     padding: 0;
     margin:0;
 }
 
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 70;
+    margin:20px;
+    font-size:16pt;
+    text-transform: uppercase;
+
+}
+
+.slide-header {
+    border-radius:20px;
+    margin-bottom:20px;
+    width:100%;
+}
 
